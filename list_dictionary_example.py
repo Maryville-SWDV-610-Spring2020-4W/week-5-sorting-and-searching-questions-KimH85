@@ -5,6 +5,8 @@ d_person_lucky_number = {}
 l_1thru10 = [1,2,3,4,5,6,7,8,9,10]
     
 def main():
+    
+    #creates the dictionary
     setup_lucky_numbers() 
     
     #loop until winner declared
@@ -87,15 +89,17 @@ def determine_winner(selected_number):
         if d_person_lucky_number[name] == selected_number:
             
             #winner declared - exit loop and return True
-            print(name,"won!  Congratulations!")
+            print(name,"WON!  Congratulations!")
             is_winner = True
-            return True
+            
     
-    #if get here - no winner declared.  Update the
-    #list, changing selected number to 0 in list and return False
-    l_1thru10[selected_number-1] = 0
-    print("No winner yet - getting next number.")
-    return False
+    if is_winner == False:
+        #if get here - no winner declared.  Update the
+        #list, changing selected number to 0 in list and return False
+        l_1thru10[selected_number-1] = 0
+        print("No winner yet - getting next number.")
+    
+    return is_winner
  
 
 main()

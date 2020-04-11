@@ -16,6 +16,7 @@ def bubble_sort(random_list):
                 random_list[i],random_list[i+1] = random_list[i+1],random_list[i]
 
     #sorted list
+    print(random_list)
     return random_list
 
 def selection_sort(random_list):
@@ -42,6 +43,7 @@ def selection_sort(random_list):
         #swap values placing largest value in its location
         random_list[index_with_largest_value],random_list[next_largest_location] = random_list[next_largest_location],random_list[index_with_largest_value]
     
+    print(random_list)
     return random_list
 
 def insertion_sort(random_list):
@@ -52,7 +54,7 @@ def insertion_sort(random_list):
     #loop list once from 2nd element through the length of list
     for i in range(1,len(random_list)):
         
-        #tracks preceding location in list for comparing value
+        #tracks locations in list for comparing value
         location_prior = i
         current_value = random_list[i]
         
@@ -63,11 +65,10 @@ def insertion_sort(random_list):
         
         #found proper location so add the current value into list
         random_list[location_prior] = current_value
-     
+    
+    print(random_list)
     return random_list
         
-
-
-print(bubble_sort([5,6,8,9,1,2,4,3,10,7,0]))
-print(selection_sort([5,6,8,9,1,2,4,3,10,7,0]))
-print(insertion_sort([5,6,8,9,1,2,4,3,10,7,0]))
+#bubble_sort([10,6,8,9,2,4,3,5,7,1])
+#selection_sort([10,6,8,9,2,4,3,5,7,1])
+insertion_sort([10,6,8,9,2,4,3,5,7,1])
