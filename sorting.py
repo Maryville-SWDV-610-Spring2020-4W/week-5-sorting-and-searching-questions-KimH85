@@ -69,6 +69,6 @@ def insertion_sort(random_list):
     print(random_list)
     return random_list
         
-#bubble_sort([10,6,8,9,2,4,3,5,7,1])
-#selection_sort([10,6,8,9,2,4,3,5,7,1])
+bubble_sort([10,6,8,9,2,4,3,5,7,1])
+selection_sort([10,6,8,9,2,4,3,5,7,1])
 insertion_sort([10,6,8,9,2,4,3,5,7,1])
